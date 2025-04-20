@@ -1,0 +1,61 @@
+package com.example.labexam2
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.ImageButton
+import android.widget.ImageView
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
+class Home1 : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_home1)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
+        val nextButton2: ImageView = findViewById(R.id.bookImage)  // favoritesButton
+        nextButton2.setOnClickListener {
+            // Create an intent to go to the  screen
+            val intent = Intent(this, Books::class.java)
+            startActivity(intent)
+        }
+
+
+        /// Bottom Navigation: Handle ALL items
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.home -> {
+                    // Already on Home, do nothing (or refresh)
+                    true
+                }
+                R.id.profile -> {
+                    startActivity(Intent(this, Profile::class.java))
+                    true
+                }
+                //R.id.tips -> {
+                    //startActivity(Intent(this, SettingsActivity::class.java))
+                    //true
+                //}
+                //R.id.save -> {
+                    //startActivity(Intent(this, SaveActivity::class.java))
+                    //true
+                //}
+                else -> false
+            }
+        }
+
+
+
+
+
+    }
+}

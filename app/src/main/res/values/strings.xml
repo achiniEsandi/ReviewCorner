@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">LabExam2</string>
+    <string name="homeTitle">Review Corner</string>
+    <string name="wtitle"> Welcome to Review Corner!</string>
+    <string name="onb1">Easily find books, movies, and dramas you love</string>
+    <string name="onb2">Track what you watch &amp; read</string>
+    <string name="onb3">Share your thoughts &amp; see what others think</string>
+    <string name="onb4">Which genres do you prefer?</string>
+    <string name="signUpTitle">Join for free!</string>
+    <string name="signUp">Sign Up!</string>
+    <string name="loginTextView">Already have an account? Log In</string>
+    <string name="forgotPasswordText">Forgot Password?</string>
+    <string name="buttonBook">+Add a new book</string>
+    <string name="bTitle">Books</string>
+    <string name="bookDetails">Book Details</string>
+
+    <string name="logout">Log Out</string>
+    <string name="deleteaccount"> Delete Account </string>
+    <string name="app_version">Book Review App v2.0</string>
+
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Get Started!</string>
+</resources>
